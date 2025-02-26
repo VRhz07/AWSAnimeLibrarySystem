@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Poller+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dashboard.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>AWS Library</h1>
+        <div class="user-controls">
+            <a href="#" class="login-button" id="-">Library</a>
+            <a href="{{ url_for('admin_user') }}" class="login-button" id="-">Users</a>
+            <a href="#" class="login-button" id="logout-button">Logout</a>
+        </div>
+    </header>
+
+    <div class="container">  
+        <main>
+            <div class="library-controls">
+                <div class="sort-controls">
+                    <button class="sort-button" id="asc">Asc</button>
+                    <button class="sort-button" id="desc">Desc</button>
+                </div>
+                <div class="search-control">
+                    <input type="text" id="search-input" placeholder="Search...">
+                </div>
+            </div>
+            <div class="library-list">
+                <div class="library-item">
+                    <div class="item-details">
+                        <h2>Anicrush</h2>
+                        <p>Site: English Sub: English</p>
+                        <p>Video: 1080p, 720p, 480p</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="update-button">Update</button>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <div class="item-details">
+                        <h2>nicrush</h2>
+                        <p>Site: English Sub: English</p>
+                        <p>Video: 1080p, 720p, 480p</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="update-button">Update</button>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                </div>
+                <div class="library-item">
+                    <div class="item-details">
+                        <h2>Snicrush</h2>
+                        <p>Site: English Sub: English</p>
+                        <p>Video: 1080p, 720p, 480p</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="update-button">Update</button>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="add-button-container">
+                <button class="add-button">Add</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

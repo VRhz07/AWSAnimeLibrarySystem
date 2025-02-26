@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main2.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Poller+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!--Navigation Bar-->
+    <header>
+        <h1><a href="{{ url_for('landing') }}">AWS Library</a></h1>
+        {% if 'username' in session %}
+            <div class="user-controls">
+                <a href="{{ url_for('userprofile') }}" class="user-button">{{ session['username'] }}</a>
+                <a href="#" class="login-button" id="logout-button">Logout</a>
+            </div>
+        {% else %}
+            <a href="{{ url_for('login_form') }}" class="login-button">Sign-up</a>
+        {% endif %}
+    </header>
+    <!--Search Bar-->
+    <div class="controls">
+        <button class="sort-button" id="asc">Asc</button>
+        <button class="sort-button" id="desc">Desc</button>
+        <input type="text" id="search-input" placeholder="Search...">
+    </div>
+    <!--Grid Card-->
+    <div class="library">
+        
+        <div class="card" data-name="animechicken">
+            <a href="https://animechicken.app/" target="_blank" rel="noopener noreferrer"><h2>animechicken</h2></a>
+            <p>Site: English Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="animefrenzy">
+            <a href="https://www.animefrenzy.org/" target="_blank" rel="noopener noreferrer"><h2>animefrenzy</h2></a>
+            <p>Site: English Dub: Chinese</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="animeheaven">
+            <a href="https://animeheaven.me/" target="_blank" rel="noopener noreferrer"><h2>animeheaven</h2></a>
+            <p>Site: English Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="anime-ultime">
+            <a href="https://www.anime-ultime.net/index-0-1" target="_blank" rel="noopener noreferrer"><h2>anime-ultime</h2></a>
+            <p>Site: French Sub: French</p>
+            <p>Video: 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="anime4up">
+            <a href="https://anime4up.top/" target="_blank" rel="noopener noreferrer"><h2>anime4up</h2></a>
+            <p>Site: Arabic Sub: Arabic</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="anime8">
+            <a href="https://anime8.ru/" target="_blank" rel="noopener noreferrer"><h2>anime8</h2></a>
+            <p>Site: English Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="animedojo">
+            <a href="https://animedojo.net/" target="_blank" rel="noopener noreferrer"><h2>animedojo</h2></a>
+            <p>Site: English Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite">★</span>
+        </div>
+        <div class="card" data-name="animeflv">
+            <a href="https://www3.animeflv.net/" target="_blank" rel="noopener noreferrer"><h2>animeflv</h2></a>
+            <p>Site: English Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="animehub">
+            <a href="https://animehub.ac/" target="_blank" rel="noopener noreferrer"><h2>animehub</h2></a>
+            <p>Site: English Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="animeid">
+            <a href="https://www.animeid.tv/" target="_blank" rel="noopener noreferrer"><h2>animeid</h2></a>
+            <p>Site: Spanish Sub: Spanish</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="animekhor">
+            <a href="https://animekhor.xyz/" target="_blank" rel="noopener noreferrer"><h2>animekhor</h2></a>
+            <p>Site: Chinese Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+        <div class="card" data-name="animenana">
+            <a href="https://animenana.com/" target="_blank" rel="noopener noreferrer"><h2>animenana</h2></a>
+            <p>Site: English Sub: English</p>
+            <p>Video: 1080p, 720p, 480p</p>
+            <span class="favorite"><i class="fa-regular fa-bookmark"></i></span>
+        </div>
+       
+    </div>
+    <div class="pagination">
+        <a href="{{ url_for('main1') }}">
+            <button>1</button>
+          </a>
+          <a href="{{ url_for('main2') }}">
+            <button>2</button>
+          </a>
+          <a href="{{ url_for('main3') }}">
+            <button>3</button>
+          </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

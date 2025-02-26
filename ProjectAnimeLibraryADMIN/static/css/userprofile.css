@@ -1,0 +1,213 @@
+body {
+    background-color: #0a0f15;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #101822;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    margin-left: 5%;
+    font-family: 'Poller One', cursive; 
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+    
+    
+}
+
+h1 a:hover {
+    color: #27b0b0; 
+}
+
+.user-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.login-button {
+    background-color: #101822;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none; 
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+button:hover, .login-button:hover {
+    background-color: #3ABEF9; 
+}
+
+main.user-profile {
+    margin-top: 50px;
+    text-align: center;
+    width: 80%;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #20738F;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    align-items: center; 
+    margin-left: 280px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-info h2 {
+    margin: 0;
+}
+
+.settings-icon {
+    font-size: 24px;
+    color: #ffffff; 
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+.settings-icon:hover {
+    color: #3ABEF9; 
+}
+
+.bookmarks-section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.bookmarks-section h3 {
+    margin-bottom: 20px;
+}
+
+.bookmarks-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    
+}
+
+.bookmarks-controls button, .bookmarks-controls input {
+    background-color: #20738F;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.bookmarks-controls button:hover, .bookmarks-controls input:hover {
+    background-color: #3ABEF9;
+}
+
+.bookmarks-controls input {
+    flex-grow: 0;
+    width: 250px; /* Increased width */
+    padding: 10px 20px; /* Increased padding */
+    text-align: center;
+    color: #ffffff; /* White text */
+    background-color: #20738F; /* Ensuring background color for contrast */
+}
+
+/* Placeholder text styling */
+.bookmarks-controls input::placeholder {
+    color: #ffffff; /* White placeholder text */
+}
+
+.bookmarks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #1e2a38;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    position: relative; /* For positioning the delete button */
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Styling for links in cards */
+.card a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.card a:hover {
+    color: #3ABEF9; /* Change color on hover */
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+/* Styling for the delete button */
+.delete-button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease; /* Smooth transformation */
+}
+
+.delete-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-button .fas.fa-trash {
+    font-size: 1.4em; /* Adjust the size as per your preference */
+    color: #ffffff;
+}
+
+.delete-button:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+.favorite {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ffdd00;
+}
